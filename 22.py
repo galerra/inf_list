@@ -1,10 +1,9 @@
+#шебанг
 if __name__ == "__main__":
-    a = list(map(int, input().split()))
-
-    b = a.copy()
-    b.sort()
-
-    if a == b:
-        print(True)
+    lst = list(map(int, input().split()))
+    cop_lst = lst.copy()
+    cop_lst.sort()
+    if lst == cop_lst:
+        print('Yeees')
     else:
-        print(False)
+        print('Nooo')
