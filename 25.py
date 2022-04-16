@@ -1,20 +1,24 @@
-def find(string, substring):
-    for i in range(len(string)):
-        count = 0
-        if string[i] == substring[0]:
-            for j in range(len(substring)):
-                if string[i + j] == substring[j]:
-                    count += 1
-                    if count == len(substring):
+#шебанг
+
+def func(strr, sstr):
+    for i in range(len(strr)):
+        c = 0
+        
+        if strr[i] == sstr[0]:
+            for j in range(len(sstr)):
+                
+                if strr[i + j] == sstr[j]:
+                    c += 1
+                    if c == len(sstr):
                         return i
     return False
+
+
 if __name__ == "__main__":
-    a = input().strip()
-    b = input().strip()
-
-    pos = find(a, b)
-
-    if pos is not False:
-        print(pos + 1)
+    x = input().strip()
+    y = input().strip()
+    p = func(x, y)
+    if p is not False:
+        print(p + 1)
     else:
-        print("The string doesn't contain this substring")
+        print("No")
